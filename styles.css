@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#grid-container {
+    display: grid;
+    flex-direction: column;
+    gap: 0;
+}
+
+.grid-row {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+}
+
+.grid-node {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+}
