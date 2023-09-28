@@ -11,6 +11,7 @@ function populateGrid(squareCount) {
         // populates rows (creates columns)
         for (let j = 0; j < squareCount; j++) {
             const rowNode = document.createElement('div');
+            rowNode.className = "grid-node";
 
             let size = GRID_CONTAINER.offsetWidth / squareCount;
             rowNode.style.width = size + "px";
@@ -24,6 +25,25 @@ function populateGrid(squareCount) {
 
         GRID_CONTAINER.appendChild(row);
     }
+}
+
+function changeSize() {
+    const newSize = prompt("Enter a new grid size in the range 1-100");
+
+    if (newSize != null && !isNaN(newSize) && newSize > 0 && newSize <= 100) {
+        populateGrid(Number(newSize));
+        
+    } else {
+        alert("Not a valid number");
+    }
+}
+
+function eraseBoard() {
+    const gridNodes = document.querySelectorAll(".grid-node");
+
+    gridNodes.forEach(node => {
+        node.style.backgroundColor = 'white';
+    })
 }
 
 populateGrid(16);

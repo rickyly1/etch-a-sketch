@@ -37,6 +37,17 @@ h1 {
     gap: 0;
 }
 
+.grid-node {
+    
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 80px;
+}
+
 button {
     font-size: 20px;
     border-radius: 8px;
@@ -46,3 +57,4 @@ button {
     border: none;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
+
