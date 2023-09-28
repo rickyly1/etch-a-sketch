@@ -11,7 +11,14 @@ function populateGrid(squareCount) {
         // populates rows (creates columns)
         for (let j = 0; j < squareCount; j++) {
             const rowNode = document.createElement('div');
-            rowNode.className = 'grid-node';
+
+            let size = GRID_CONTAINER.offsetWidth / squareCount;
+            rowNode.style.width = size + "px";
+            rowNode.style.height = size + "px";
+
+            rowNode.addEventListener('mouseenter', () => {
+                rowNode.style.backgroundColor = 'black';
+            })
             row.appendChild(rowNode);
         }
 
